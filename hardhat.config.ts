@@ -32,10 +32,10 @@ const config: HardhatUserConfig = {
       },
       mining: {
         // Comment out all the mining config when testing
-        interval: 5000,
-        mempool: {
-          order: 'fifo',
-        },
+        // interval: 5000,
+        // mempool: {
+        //   order: 'fifo',
+        // },
       },
     },
     ropsten: {
