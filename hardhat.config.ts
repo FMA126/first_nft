@@ -30,13 +30,13 @@ const config: HardhatUserConfig = {
         url: `https://eth-mainnet.alchemyapi.io/v2/${process.env.ALCHEMY_KEY}`,
         blockNumber: 13915411,
       },
-      mining: {
-        // Comment out all the mining config when testing
-        // interval: 5000,
-        // mempool: {
-        //   order: 'fifo',
-        // },
-      },
+      // Comment out all the mining config when testing
+      // mining: {
+      // interval: 5000,
+      // mempool: {
+      //   order: 'fifo',
+      // },
+      // },
     },
     ropsten: {
       url: process.env.ROPSTEN_URL || '',

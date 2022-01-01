@@ -9,6 +9,8 @@ import "@openzeppelin/contracts/utils/Counters.sol";
 contract Color is ERC721URIStorage {
     using Counters for Counters.Counter;
     Counters.Counter private _tokenIds;
+    string baseUri = "";
+    
 
     constructor() ERC721("Colors", "COLORS") {}
 
