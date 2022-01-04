@@ -29,15 +29,11 @@ describe('Color Contract', function () {
   });
 });
 
-describe('Mint blue nft', () => {
-  it('should mint successfully', async () => {
-    await color.getNewItem(
-      signers[1].address,
-      'https://ipfs.io/ipfs/Qmdkex1m9e3u2yqyqxCnoLvZMjsGGvLqZM6Go4UAewKqkz?filename=blue.jpg'
-    );
-    const blueUri = await color.tokenURI(1);
-    expect(blueUri).to.equal(
-      'https://ipfs.io/ipfs/Qmdkex1m9e3u2yqyqxCnoLvZMjsGGvLqZM6Go4UAewKqkz?filename=blue.jpg'
-    );
+describe('Set base uri', async () => {
+  it('should set base uri and return correct token uri', async () => {
+    await color.setBaseURI('https://example.com/');
+    await color.getNewItem(signers[1].address);
+    const firstNFTURI = await color.tokenURI(1);
+    expect(firstNFTURI).to.equal('https://example.com/1');
   });
 });

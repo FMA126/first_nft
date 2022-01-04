@@ -26,10 +26,10 @@ const config: HardhatUserConfig = {
   solidity: '0.8.4',
   networks: {
     hardhat: {
-      forking: {
-        url: `https://eth-mainnet.alchemyapi.io/v2/${process.env.ALCHEMY_KEY}`,
-        blockNumber: 13915411,
-      },
+      // forking: {
+      //   url: `https://eth-mainnet.alchemyapi.io/v2/${process.env.ALCHEMY_KEY}`,
+      //   blockNumber: 13915411,
+      // },
       // Comment out all the mining config when testing
       // mining: {
       // interval: 5000,
@@ -38,8 +38,8 @@ const config: HardhatUserConfig = {
       // },
       // },
     },
-    ropsten: {
-      url: process.env.ROPSTEN_URL || '',
+    rinkeby: {
+      url: process.env.RINKEBY_URL || '',
       accounts:
         process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
     },
