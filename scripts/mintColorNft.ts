@@ -2,8 +2,10 @@ import { Contract } from 'ethers';
 import { ethers } from 'hardhat';
 import * as ColorArtifact from '../artifacts/contracts/Color.sol/Color.json';
 import { Color } from '../typechain'; // eslint-disable-line node/no-missing-import
+// eslint-disable-next-line node/no-missing-import
+import { COLOR_ADDRESS_RINKEBY } from '../constants';
 
-const colorRinkebyAddress = '0x9C9b44492ace2fFB8215145a108Ce96756fD5FFF';
+const colorRinkebyAddress = COLOR_ADDRESS_RINKEBY;
 
 const mintColorNft = async () => {
   // const provider = new providers.AlchemyProvider(
